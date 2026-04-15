@@ -209,13 +209,15 @@ Should show 'Module unloaded'.
 ![Screenshot 5a](demoscreenshots/SS6_1.png)
 ![Screenshot 5b](demoscreenshots/SS6_2.png)
 
-**Caption:** `sudo dmesg` showing the kernel module emitting a `SOFT LIMIT` warning for container `mem1` (pid=4505) when its RSS (34,091,008 bytes ≈ 32.5 MiB) exceeded the configured soft limit (31,457,280 bytes = 30 MiB). The warning is emitted exactly once per container entry.
+**Caption:** `sudo dmesg` showing the kernel module emitting a `SOFT LIMIT` warning for container `mem1` (pid=3746) when its RSS exceeded the configured soft limit. The warning is emitted exactly once per container entry.
 
 ---
 
 ### Screenshot 6 — Hard-Limit Enforcement
 
-![Screenshot 6](demoscreenshots/SS6_3.png)
+
+![Screenshot 6a](demoscreenshots/SS6_2.png)
+![Screenshot 6b](demoscreenshots/SS6_3.png)
 
 **Caption (dmesg part):** The kernel module emits a `HARD LIMIT` event for `mem1` and sends `SIGKILL` to the process.
 
